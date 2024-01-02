@@ -29,7 +29,7 @@ class ItemTile extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 height: 60,
                 width: 120,
                 child: Image(
