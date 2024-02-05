@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoping_app/UI/home/screen_home.dart';
+import 'package:shoping_app/UI/Main/screen_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.cyan),
-      home: const ScreenHome(),
+      home: const ScreenMain(),
     );
   }
 }

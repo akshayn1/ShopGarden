@@ -44,7 +44,7 @@ class ScreenProduct extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 343,
+              height: 319,
               width: double.infinity,
               decoration: const BoxDecoration(
                   color: Colors.white,
@@ -130,7 +130,7 @@ class ScreenProduct extends StatelessWidget {
                       height: 50,
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 36,
                       width: double.infinity,
                       child: ElevatedButton.icon(
                         onPressed: () {},

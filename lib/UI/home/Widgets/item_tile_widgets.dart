@@ -29,11 +29,13 @@ class ItemTile extends StatelessWidget {
           ),
           child: Column(
             children: [
-              SizedBox(
-                height: 60,
-                width: 120,
-                child: Image(
-                  image: NetworkImage(url, scale: 5),
+              Expanded(
+                child: SizedBox(
+                  height: 60,
+                  width: 120,
+                  child: Image(
+                    image: NetworkImage(url, scale: 5),
+                  ),
                 ),
               ),
               Text(

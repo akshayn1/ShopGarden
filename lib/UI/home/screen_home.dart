@@ -1,140 +1,49 @@
 import 'package:flutter/material.dart';
-import 'package:shoping_app/UI/cart/screen_cart.dart';
 import 'package:shoping_app/UI/home/Widgets/item_tile_widgets.dart';
 
-class ScreenHome extends StatelessWidget {
-  const ScreenHome({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 3, 195, 169),
-      appBar: AppBar(
-        title: const Center(
-          child: SizedBox(
-              height: 150,
-              width: 150,
-              child: Image(image: AssetImage('assets/image/ShopGarden.png'))),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (((context) {
-                return const ScreenCart();
-              }))));
-            },
-            icon: const Icon(Icons.shopping_cart),
-          ),
-        ],
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 3, 195, 169)),
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: NetworkImage(
-                      'https://www.corporatephotographerslondon.com/wp-content/uploads/2021/07/LinkedIn_profile_photo_sample_1-300x300.jpg',
-                    ),
-                  ),
-                  Text(
-                    "Akshay",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.home,
-                color: Color.fromARGB(255, 55, 114, 57),
-              ),
-              title: const Text(
-                "Home",
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.list_alt,
-                color: Color.fromARGB(255, 55, 114, 57),
-              ),
-              title: const Text("Orders"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.settings,
-                color: Color.fromARGB(255, 55, 114, 57),
-              ),
-              title: const Text("Settings"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.account_circle,
-                color: Color.fromARGB(255, 55, 114, 57),
-              ),
-              title: const Text("About"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.info,
-                color: Color.fromARGB(255, 55, 114, 57),
-              ),
-              title: const Text("info"),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 85,
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "HELLO, ",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "Akshay",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )
-                  ],
+    return Column(
+      children: [
+        const SizedBox(
+          height: 85,
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Text(
+                  "HELLO, ",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold),
                 ),
-              ),
+                Text(
+                  "Akshay",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                )
+              ],
             ),
-            Container(
-              height: 618,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(23),
-                    topRight: Radius.circular(23)),
-              ),
+          ),
+        ),
+        Expanded(
+          child: Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(23), topRight: Radius.circular(23)),
+            ),
+            child: Expanded(
               child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GridView.count(
@@ -152,7 +61,7 @@ class ScreenHome extends StatelessWidget {
                           price: 160),
                       ItemTile(
                           url:
-                              'https://img.freepik.com/free-photo/colorful-fruits-tasty-fresh-ripe-juicy-white-desk_179666-169.jpg?w=740&t=st=1703396125~exp=1703396725~hmac=869e757f661b952130a56745a132bb9d6d11196bfd86d5cecfd0639a5f3cb4fd',
+                              'https://img.freepik.com/free-psd/mix-fruits-png-isolated-transparent-background_191095-9867.jpg?w=740&t=st=1706456899~exp=1706457499~hmac=4fddc442d0edff7460550763f3b179e23a28dafadbf6b25d403ea582d11127e0',
                           title: "Fruits",
                           price: 430),
                       ItemTile(
@@ -192,10 +101,10 @@ class ScreenHome extends StatelessWidget {
                           price: 100),
                     ],
                   )),
-            )
-          ],
-        ),
-      ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

@@ -30,12 +30,14 @@ class ScreenCart extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  const Text(
-                    "Shipping, ",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold),
+                  const Expanded(
+                    child: Text(
+                      "Shipping, ",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   const Text(
                     "To Address",
@@ -58,32 +60,39 @@ class ScreenCart extends StatelessWidget {
                           side: const BorderSide(color: Colors.white, width: 2),
                         ),
                       ),
-                      child: const Text('Change'),
+                      child: const Text(
+                        'Change',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w700),
+                      ),
                     ),
                   )
                 ],
               ),
             ),
           ),
-          Container(
-            height: 530,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(23), topRight: Radius.circular(23)),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListView(
-                children: const [
-                  CartItemTile(),
-                  CartItemTile(),
-                  CartItemTile(),
-                  CartItemTile(),
-                  CartItemTile(),
-                  CartItemTile(),
-                ],
+          Expanded(
+            child: Container(
+              height: 530,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(23),
+                    topRight: Radius.circular(23)),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 8, left: 4, right: 4),
+                child: ListView(
+                  children: const [
+                    CartItemTile(),
+                    CartItemTile(),
+                    CartItemTile(),
+                    CartItemTile(),
+                    CartItemTile(),
+                    CartItemTile(),
+                  ],
+                ),
               ),
             ),
           ),
@@ -94,12 +103,12 @@ class ScreenCart extends StatelessWidget {
           Container(
             color: Colors.white,
             width: double.infinity,
-            height: 87,
+            height: 62,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SizedBox(
-                  height: 55,
+                  height: 40,
                   width: 200,
                   child: ElevatedButton.icon(
                     onPressed: () {},
